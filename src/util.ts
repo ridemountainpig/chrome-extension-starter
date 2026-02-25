@@ -16,7 +16,7 @@ export function getStorage<V = any>(key: string): Promise<V | undefined> {
       if (chrome.runtime.lastError) {
         reject(chrome.runtime.lastError);
       } else {
-        resolve(result[key]);
+        resolve(result[key] as V | undefined);
       }
     });
   });

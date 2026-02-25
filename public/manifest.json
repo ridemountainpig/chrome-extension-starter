@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Chrome Extension Starter",
   "description": "Chrome extension starter template with React, TypeScript, Vite and Tailwind",
-  "version": "1.0",
+  "version": "1.0.0",
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
@@ -13,7 +13,11 @@
     "open_in_tab": true
   },
   "action": {
-    "default_icon": "icon.png",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
     "default_popup": "popup.html"
   },
   "content_scripts": [
@@ -23,8 +27,8 @@
     }
   ],
   "background": {
-    "type": "module",
-    "service_worker": "service_worker.js"
+    "service_worker": "service_worker.js",
+    "type": "module"
   },
   "permissions": ["storage", "tabs", "tabGroups"],
   "host_permissions": ["<all_urls>"]

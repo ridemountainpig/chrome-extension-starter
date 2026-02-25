@@ -6,6 +6,7 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   plugins: [react()],
   build: {
+    target: "es2022",
     rollupOptions: {
       input: {
         popup: resolve(__dirname, "popup.html"),
